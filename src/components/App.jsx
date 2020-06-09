@@ -12,7 +12,7 @@ import dummyData from '../dummy-data/friends'
 export default function App() {
   // 3- Initialize a slice of state to keep track of the data
   // using the dummy data as the initial value of the slice of state
-  const [friends, setFriends] = useState(dummyData)
+  const [friends, setFriends] = useState(dummyData) // and we don't touch dummy data again
 
   // 4- Initialize a slice to keep track of the value of the search box
   // using an empty string as the initial value of the slice
@@ -25,10 +25,11 @@ export default function App() {
     <div className='app-friends container'>
       {/* 5- Render the Search component */}
       {/* STRETCH - Changes to the input should update the search term */}
-
+      <Search />
 
       {/* 6- Render the FriendsList component */}
       {/* What prop/props does FriendsList need? */}
+      <FriendsList listOfFriends={friends} />
     </div>
   )
 }
