@@ -16,6 +16,7 @@ export default function App() {
 
   // 4- Initialize a slice to keep track of the value of the search box
   // using an empty string as the initial value of the slice
+  const [searchText, setSearchText] = useState('')
 
   // STRETCH - Make a helper function that returns
   // a filtered array of friends data (filtering by search term)
