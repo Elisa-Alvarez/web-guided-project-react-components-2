@@ -13,7 +13,7 @@ export default function FriendsList(props) {
       {
         listOfFriends.map(friendObject => {
           console.log(friendObject)
-          return <Friend key={friendObject.id} />
+          return <Friend key={friendObject.id} foo={7} friendData={friendObject} />
         })
       }
 

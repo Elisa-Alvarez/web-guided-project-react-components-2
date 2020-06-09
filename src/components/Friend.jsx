@@ -3,11 +3,13 @@ import PetsList from './PetsList'
 
 export default function Friend(props) {
   // 1- What does a Friend need?
+  // const { foo, friendData: { name, age } } = props
+  const { foo, friendData } = props
 
   return (
     <div className='friend-friends container'>
       {/* 2- Fix the JSX so it displays real info coming into the component */}
-      <h2>Jessica</h2>
+      <h2>{friendData.name}</h2>
 
       <div className='friend-info'>
         <div >
