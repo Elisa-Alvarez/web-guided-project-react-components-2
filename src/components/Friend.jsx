@@ -32,7 +32,7 @@ export default function Friend(props) {
           {/* 3- What data does the PetsList need? */}
           {/* What is the exact name of the prop/props it expects? */}
           {/* Is the data around here somewhere so I may pass it? */}
-          <PetsList />
+          <PetsList pets={friendData.pets} />
         </div>
       </div>
     </div>
