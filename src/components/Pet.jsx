@@ -9,7 +9,7 @@ export default function Pet(props) {
   return (
     <div className='pet-friends container'>
       <h4>{name} ({type})</h4>
-      {fav ? '❤️' : <button>fav</button>}
+      {fav ? '❤️' : <button onClick={evt => setFav(true)}>fav</button>}
     </div>
   )
 }
