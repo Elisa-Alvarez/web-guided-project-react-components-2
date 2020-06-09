@@ -25,11 +25,16 @@ export default function App() {
     <div className='app-friends container'>
       {/* 5- Render the Search component */}
       {/* STRETCH - Changes to the input should update the search term */}
-      <Search />
+      <Search updater={setSearchText} />
 
       {/* 6- Render the FriendsList component */}
       {/* What prop/props does FriendsList need? */}
-      <FriendsList listOfFriends={friends} />
+      <FriendsList listOfFriends={friends.filter(friend => {
+        if (!searchText || friend.name.includes(searchText)) {
+          return friend
+        }
+        return false
+      })} />
     </div>
   )
 }

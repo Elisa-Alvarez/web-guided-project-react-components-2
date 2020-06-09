@@ -11,7 +11,7 @@ export default function PetsList(props) {
       {/* What props does the Pet component expect? */}
       {
         pets.map(pet => {
-          return <Pet key={pet.id} pet={pet} />
+          return <Pet key={pet.id} name={pet.name} type={pet.type} />
         })
       }
     </div>
